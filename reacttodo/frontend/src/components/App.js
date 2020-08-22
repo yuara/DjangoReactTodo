@@ -17,6 +17,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path='/delete/:id' component={TodoDetele} />
+            <Route exact path='/edit/:id' component={TodoEdit} />
           </Switch>
         </Router>
       </Provider>
