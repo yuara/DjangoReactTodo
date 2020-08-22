@@ -90,11 +90,11 @@
 /*!***************************************!*\
   !*** ./frontend/src/actions/todos.js ***!
   \***************************************/
-/*! exports provided: getTodos */
+/*! exports provided: getTodos, addTodo */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getTodos\", function() { return getTodos; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ \"./frontend/src/actions/types.js\");\n\n // GET TODOS\n\nconst getTodos = () => async dispatch => {\n  const res = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/todos/');\n  dispatch({\n    type: _types__WEBPACK_IMPORTED_MODULE_1__[\"GET_TODOS\"],\n    payload: res.data\n  });\n};\n\n//# sourceURL=webpack:///./frontend/src/actions/todos.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getTodos\", function() { return getTodos; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addTodo\", function() { return addTodo; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-form */ \"./node_modules/redux-form/es/index.js\");\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types */ \"./frontend/src/actions/types.js\");\n\n\n // GET TODOS\n\nconst getTodos = () => async dispatch => {\n  const res = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/todos/');\n  dispatch({\n    type: _types__WEBPACK_IMPORTED_MODULE_2__[\"GET_TODOS\"],\n    payload: res.data\n  });\n}; // ADD TODO\n\nconst addTodo = formValues => async dispatch => {\n  const res = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/todos', { ...formValues\n  });\n  dispatch({\n    type: _types__WEBPACK_IMPORTED_MODULE_2__[\"ADD_TODO\"],\n    payload: res.data\n  });\n  dispatch(Object(redux_form__WEBPACK_IMPORTED_MODULE_1__[\"reset\"])('todoForm'));\n};\n\n//# sourceURL=webpack:///./frontend/src/actions/todos.js?");
 
 /***/ }),
 
