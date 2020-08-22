@@ -1,5 +1,5 @@
 module.exports = {
-  nodule: {
+  module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
