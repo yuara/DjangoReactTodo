@@ -8,7 +8,7 @@ class TodoList extends Component {
   }
 
   render() {
-    renturn{
+    return (
       <div className='ui relaxed divided list' style={{ marginTop: '2rem' }}>
         {this.props.todos.map(todo => (
           <div className='item' key={todo.id}>
@@ -20,7 +20,7 @@ class TodoList extends Component {
           </div>
         ))}
       </div>
-    };
+    );
   }
 }
 
